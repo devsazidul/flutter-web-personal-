@@ -13,25 +13,22 @@ class AboutMe extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 60),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start, // 🟢 টপ থেকে শুরু করবে
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // 🖼 Image (বাম পাশে)
           Container(
             color: Colors.transparent,
             child: Image.asset(
               ImagePath.logo,
-              height: 600, // একটু ছোট নিলে ভালো দেখাবে
+              height: 600,
               fit: BoxFit.cover,
             ),
           ),
           const SizedBox(width: 50),
-
-          // 📝 Text (ডান পাশে)
           Container(
             width: 500,
             color: Colors.transparent,
-            alignment: Alignment.topLeft, // 🟢 টেক্সটকে টপে বসাবে
+            alignment: Alignment.topLeft,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -164,9 +161,9 @@ class AboutMe extends StatelessWidget {
                 ),
                 SizedBox(height: 50),
                 Container(
-                  padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                  padding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(8),
                     color: Colors.blue,
                   ),
                   child: Text(
@@ -174,6 +171,7 @@ class AboutMe extends StatelessWidget {
                     style: getTextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w400,
+                      fontSize: 4
                     ),
                   ),
                 ),
